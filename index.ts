@@ -82,7 +82,11 @@ class CueQueue extends events.EventEmitter{
         super()
         
         
+        
     }
+    private addTaskTypePrototypes(){}
+    private runQueue(){}
+    
     
     //Task types crud
     public taskTypes(){}
@@ -100,6 +104,9 @@ class CueQueue extends events.EventEmitter{
     public stopTask(){}
     public cancelTask(){}
     public restartTask(){}
+    public stopAllTasks(){}
+    public cancelAllTasks(){}
+    public restartAllTasks(){}
     
     //Queue crud
     public queues(){}
@@ -113,5 +120,14 @@ class CueQueue extends events.EventEmitter{
     public moveTaskToEnd(){}
     public moveTaskTo(){}
     public moveTaskToQueue(){}
+    
+    //queue running
+    public startQueue(){}
+    public stopQueue(){}
+    public restartQueue(){}
+    public startAllQueues(){}
+    public stopAllQueues(){}
+    public restartAllQueues(){}
+    
     
 }
