@@ -70,24 +70,34 @@ interface serviceSettings{
     taskSaver?:any
 }
 
+/**
+ * Holds data pertaining to queue scheduling
+ */
+interface queueSchedule{
+    timeCheckInterval: number
+    scheduledQueues: queue[]
+}
+
 
 /**
  * 
- * TODO: think out logic for how to allow users to store 
- * tasks and queues to different database types.
+ * 
  */
-class CueQueue extends events.EventEmitter{
+class TaskLord extends events.EventEmitter{
     public settings : serviceSettings = {}
-    constructor(){
+    constructor(settings: serviceSettings){
         super()
         
         
         
     }
-    private addTaskTypePrototypes(){}
+    private addTaskTypePrototypes(taskType: taskType){
+        //TODO:
+    }
     private runQueue(){}
-    
-    
+    private createTaskID(){}
+    private createTaskTypeID(){}
+    private createQueueID(){}
     //Task types crud
     public taskTypes(){}
     public createTaskType(){}

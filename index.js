@@ -7,39 +7,55 @@ var __extends = (this && this.__extends) || function (d, b) {
 var events = require('events');
 /**
  *
- * TODO: think out logic for how to allow users to store
- * tasks and queues to different database types.
+ *
  */
-var CueQueue = (function (_super) {
-    __extends(CueQueue, _super);
-    function CueQueue() {
+var TaskLord = (function (_super) {
+    __extends(TaskLord, _super);
+    function TaskLord(settings) {
         _super.call(this);
         this.settings = {};
     }
+    TaskLord.prototype.addTaskTypePrototypes = function (taskType) {
+        //TODO:
+    };
+    TaskLord.prototype.runQueue = function () { };
+    TaskLord.prototype.createTaskID = function () { };
+    TaskLord.prototype.createTaskTypeID = function () { };
+    TaskLord.prototype.createQueueID = function () { };
     //Task types crud
-    CueQueue.prototype.taskTypes = function () { };
-    CueQueue.prototype.createTaskType = function () { };
-    CueQueue.prototype.updateTaskType = function () { };
-    CueQueue.prototype.removeTaskType = function () { };
+    TaskLord.prototype.taskTypes = function () { };
+    TaskLord.prototype.createTaskType = function () { };
+    TaskLord.prototype.updateTaskType = function () { };
+    TaskLord.prototype.removeTaskType = function () { };
     //Task crud
-    CueQueue.prototype.tasks = function () { };
-    CueQueue.prototype.createTask = function () { };
-    CueQueue.prototype.updateTask = function () { };
-    CueQueue.prototype.removeTask = function () { };
+    TaskLord.prototype.tasks = function () { };
+    TaskLord.prototype.createTask = function () { };
+    TaskLord.prototype.updateTask = function () { };
+    TaskLord.prototype.removeTask = function () { };
     //Task running actions
-    CueQueue.prototype.stopTask = function () { };
-    CueQueue.prototype.cancelTask = function () { };
-    CueQueue.prototype.restartTask = function () { };
+    TaskLord.prototype.stopTask = function () { };
+    TaskLord.prototype.cancelTask = function () { };
+    TaskLord.prototype.restartTask = function () { };
+    TaskLord.prototype.stopAllTasks = function () { };
+    TaskLord.prototype.cancelAllTasks = function () { };
+    TaskLord.prototype.restartAllTasks = function () { };
     //Queue crud
-    CueQueue.prototype.queues = function () { };
-    CueQueue.prototype.createQueue = function () { };
-    CueQueue.prototype.updateQueue = function () { };
-    CueQueue.prototype.removeQueue = function () { };
+    TaskLord.prototype.queues = function () { };
+    TaskLord.prototype.createQueue = function () { };
+    TaskLord.prototype.updateQueue = function () { };
+    TaskLord.prototype.removeQueue = function () { };
     //Task in queue manipulation
-    CueQueue.prototype.moveTaskToFront = function () { };
-    CueQueue.prototype.moveTaskToEnd = function () { };
-    CueQueue.prototype.moveTaskTo = function () { };
-    CueQueue.prototype.moveTaskToQueue = function () { };
-    return CueQueue;
+    TaskLord.prototype.moveTaskToFront = function () { };
+    TaskLord.prototype.moveTaskToEnd = function () { };
+    TaskLord.prototype.moveTaskTo = function () { };
+    TaskLord.prototype.moveTaskToQueue = function () { };
+    //queue running
+    TaskLord.prototype.startQueue = function () { };
+    TaskLord.prototype.stopQueue = function () { };
+    TaskLord.prototype.restartQueue = function () { };
+    TaskLord.prototype.startAllQueues = function () { };
+    TaskLord.prototype.stopAllQueues = function () { };
+    TaskLord.prototype.restartAllQueues = function () { };
+    return TaskLord;
 })(events.EventEmitter);
 //# sourceMappingURL=index.js.map
