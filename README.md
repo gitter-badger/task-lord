@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/Johnhhorton/task-lord.svg?label=ready&title=Ready)](http://waffle.io/Johnhhorton/task-lord)
+
 # task-lord
 
 I wanted to create a robust task queuing module that was as flexible as it was useful.  The end goal for this project
