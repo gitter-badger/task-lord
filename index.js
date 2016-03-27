@@ -16,7 +16,10 @@ var TaskLord = (function (_super) {
         this.settings = {};
     }
     TaskLord.prototype.addTaskTypePrototypes = function (taskType) {
-        //TODO:
+        /**
+         * Add done() function to the passed action function
+         * that will make tell the queue that the task is finished.
+         */
     };
     TaskLord.prototype.runQueue = function () { };
     TaskLord.prototype.createTaskID = function () { };
@@ -33,6 +36,13 @@ var TaskLord = (function (_super) {
     TaskLord.prototype.updateTask = function () { };
     TaskLord.prototype.removeTask = function () { };
     //Task running actions
+    TaskLord.prototype.taskFinished = function (task) {
+        /**
+         * Passed from the .done() function of
+         * an action function.  When complete move task and results
+         * into the queue's finished array.  Tell Queue to continue.
+         */
+    };
     TaskLord.prototype.stopTask = function () { };
     TaskLord.prototype.cancelTask = function () { };
     TaskLord.prototype.restartTask = function () { };
