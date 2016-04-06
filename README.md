@@ -2,6 +2,8 @@
 
 # task-lord
 
+[![Join the chat at https://gitter.im/Johnhhorton/task-lord](https://badges.gitter.im/Johnhhorton/task-lord.svg)](https://gitter.im/Johnhhorton/task-lord?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 I wanted to create a robust task queuing module that was as flexible as it was useful.  The end goal for this project
 is to have a module that can:
 * Create task types defined in Javascript through which custom task information can be passed for running.
